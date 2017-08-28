@@ -23,3 +23,12 @@ $factory->define(App\clientes::class, function (Faker\Generator $faker) {
         'HORA_SALIDA' => 'null',
     ];
 });
+
+
+$factory->define(App\producto::class, function (Faker\Generator $faker) {
+    return [
+        'NOMBRE_PRODUCTO' => $faker->name,
+        'COSTO' => $faker ->biasedNumberBetween($min = 20.00, $max = 1000.50, $function = 'sqrt'),
+        'CATEGORIA'=> $faker->biasedNumberBetween($min = 0, $max = 4, $function = 'sqrt'),
+    ];
+});

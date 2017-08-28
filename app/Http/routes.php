@@ -1,5 +1,6 @@
 <?php
 
+use App\clientes;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -15,5 +16,11 @@ Route::get('/', function () {
     return view('panel');
 });
 
+Route::get('clientes10', function () {
+    clientes::all();
+});
+
+
 Route::resource('clientes','Controladorcliente',['except' => 'show']);
+
 
