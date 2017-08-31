@@ -31,9 +31,9 @@
 								<h3>Cliente: @{{ lista.NOMBRE_CLIENTE }} </h3>
                                 <p>
                                     Fecha: @{{ lista.FECHA_ENTRADA }}  Hora: @{{ lista.HORA_ENTRADA }}<br>
-                                    No. de ticket: @{{ lista.id }}<br>
+                                    No. de ticket: @{{ lista.ID_CLIENTE }}<br>
                                 </p>
-								<a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="eliminarcliente(lista)">Eliminar</a>
+								<a href="#" class="btn btn-danger btn-sm" v-on:click.prevent="eliminarcliente(lista.ID_CLIENTE)">Eliminar</a>
 							</div>
 						</div>
 

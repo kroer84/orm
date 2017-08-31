@@ -13,7 +13,7 @@ class TablaProductos extends Migration
     public function up()
     {
         Schema::create('productos', function (Blueprint $table) {
-            $table->increments('ID_CLIENTE');
+            $table->increments('ID_PRODUCTO');
             $table->string('NOMBRE_PRODUCTO')->unique();
             $table->float('COSTO',8,2);
             $table->smallInteger('CATEGORIA')->default(0);

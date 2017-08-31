@@ -32,3 +32,12 @@ $factory->define(App\producto::class, function (Faker\Generator $faker) {
         'CATEGORIA'=> $faker->biasedNumberBetween($min = 0, $max = 4, $function = 'sqrt'),
     ];
 });
+
+$factory->define(App\venta::class, function (Faker\Generator $faker) {
+    return [
+
+        'ID_C' =>$faker->biasedNumberBetween($min = 0, $max = 200, $function = 'sqrt'),
+        'ID_P' =>$faker->biasedNumberBetween($min = 0, $max = 200, $function = 'sqrt'),
+        'CANTIDAD' =>$faker->biasedNumberBetween($min = 0, $max = 4, $function = 'sqrt'),
+    ];
+});

@@ -16,7 +16,7 @@ new Vue({
 		},
 
 		eliminarcliente: function(cliente){
-			var url = 'clientes/'+ cliente.id;
+			var url = 'clientes/'+ cliente.ID_CLIENTE;
 			axios.delete(url).then(responce=>{
 				this.getclientes();
 				toastr.options.closeButton = true;
